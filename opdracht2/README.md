@@ -29,8 +29,12 @@ Zou moeten werken vanaf IE9
 
 ## Carousel
 Ik heb de carousel gemaakt met `a[href="#image-NUMBER"]` en `:target`.
+
 In CSS wordt een `scroll-behaviour: smooth` toegevoegd.
+
 In JavaScript worden `button` elementen toegevoegd om te navigeren in de carousel.
+
 Zou moeten werken vanaf IE9
+
 [Carousel](https://meesrutten.me/minor/browser-tech/opdracht2/carousel.html/)
 
