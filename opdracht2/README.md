@@ -20,8 +20,11 @@ Beoordelingscriteria
 
 ## Menu
 Ik heb hier een menu gemaakt met `a[href="#menu"]` en `:target`.
+
 Dit menu werkt zonder JavaScript en zonder CSS.
+
 Zou moeten werken vanaf IE9
+
 [Menu](https://meesrutten.me/minor/browser-tech/opdracht2/index.html/)
 
 ## Carousel
