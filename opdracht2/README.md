@@ -34,6 +34,9 @@ In CSS wordt een `scroll-behaviour: smooth` toegevoegd.
 
 In JavaScript worden `button` elementen toegevoegd om te navigeren in de carousel.
 
+Werkt zonder JavaScript.
+Zonder CSS ziet het er vreemd uit maar het werkt wel ongeveer.
+
 Zou moeten werken vanaf IE9
 
 [Carousel](https://meesrutten.me/minor/browser-tech/opdracht2/carousel.html/)
