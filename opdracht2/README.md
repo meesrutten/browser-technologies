@@ -20,10 +20,23 @@ Beoordelingscriteria
 
 ## Menu
 Ik heb hier een menu gemaakt met `a[href="#menu"]` en `:target`.
+Het menu wordt geanimeerd door CSS.
 
 Dit menu werkt zonder JavaScript en zonder CSS.
 
 Zou moeten werken vanaf IE9
+
+`Array.prototype.forEach`
+Wordt gebruikt als loop functie
+
+`querySelector`
+Wordt gebruikt voor element selection
+
+`requestAnimationFrame`
+Wordt gebruikt voor high performing animatie
+
+`matchMedia`
+Wordt gebruikt voor het menu op kleine schermen
 
 [Menu](https://meesrutten.me/minor/browser-tech/opdracht2/index.html/)
 
