@@ -215,7 +215,8 @@ li {
 	<script>
 		if (Array.prototype.forEach 
 		&& 'querySelector' in document 
-		&& 'requestAnimationFrame' in window) {
+		&& 'requestAnimationFrame' in window
+		&& 'matchMedia' in window) {
 			if (window.matchMedia("(max-width: 48em)").matches) {
 				/* the viewport is at least 400 pixels wide */
 				(function () {
