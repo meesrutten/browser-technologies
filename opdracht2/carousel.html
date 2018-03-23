@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Modal</title>
+
+	<style>
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	background-color: black;
+}
+
+::-webkit-scrollbar
+{
+  width: 0.65em;  /* for vertical scrollbars */
+  height: 0.65em; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(255, 255, 255, 1);
+}
+
+.carousel {
+	margin: 0 auto;
+}
+.carousel a{
+	text-decoration: none;
+}
+
+.carousel-highlight {
+	width: calc(100% * .8);
+
+	position: relative;
+
+	margin: 0 auto;
+
+	border: 1px solid white;
+}
+.carousel-holder {
+	width: fit-content;
+	white-space: nowrap;
+	margin: 0;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+
+}
+img {
+	/* float: left; */
+	width: 100%;
+	height: 56%;
+}
+.carousel-preview {
+	width: calc(100% * .8);
+	margin: 1em auto;
+}
+.carousel-preview img {
+	max-width: 5em;
+	border: 1px solid white;
+}
+[data-enable="js"] {
+	border: 0;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+
+	padding: 1em 2em;
+
+	display: none;
+
+	transition: background-color 150ms ease-out;
+}
+[data-enable="js"]:hover {
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+}
+#next {
+	right: 0;
+	left: initial;
+}
+	</style>
+</head>
+<body>
+ <section class="carousel">
+
+ 	<section class="carousel-highlight">
+		<figure class="carousel-holder">
+			<nav>
+				<button id="prev" data-enable="js"> < </button>
+				<button id="next" data-enable="js"> > </button>
+			</nav>
+
+			<img id="image-1" src="https://picsum.photos/530/300" alt="An image">
+			<img id="image-2" src="https://picsum.photos/530/301" alt="An image">
+			<img id="image-3" src="https://picsum.photos/530/302" alt="An image">
+			<img id="image-4" src="https://picsum.photos/530/303" alt="An image">
+			<img id="image-5" src="https://picsum.photos/530/304" alt="An image">
+			<img id="image-6" src="https://picsum.photos/530/305" alt="An image">
+			<img id="image-7" src="https://picsum.photos/530/306" alt="An image">
+			<img id="image-8" src="https://picsum.photos/530/307" alt="An image">
+			<img id="image-9" src="https://picsum.photos/530/308" alt="An image">
+			<img id="image-10" src="https://picsum.photos/530/309" alt="An image">
+		</figure>
+	 </section>
+	<figure class="carousel-preview">
+		<a href="#image-1">
+			<img id="image-1" src="https://picsum.photos/530/300" alt="An image">
+		</a>
+		<a href="#image-2">
+			<img id="image-2" src="https://picsum.photos/530/301" alt="An image">
+		</a>
+		<a href="#image-3">
+			<img id="image-3" src="https://picsum.photos/530/302" alt="An image">
+		</a>
+		<a href="#image-4">
+			<img id="image-4" src="https://picsum.photos/530/303" alt="An image">
+		</a>
+		<a href="#image-5">
+			<img id="image-5" src="https://picsum.photos/530/304" alt="An image">
+		</a>
+		<a href="#image-6">
+			<img id="image-6" src="https://picsum.photos/530/305" alt="An image">
+		</a>
+		<a href="#image-7">
+			<img id="image-7" src="https://picsum.photos/530/306" alt="An image">
+		</a>
+		<a href="#image-8">
+			<img id="image-8" src="https://picsum.photos/530/307" alt="An image">
+		</a>
+		<a href="#image-9">
+			<img id="image-9" src="https://picsum.photos/530/308" alt="An image">
+		</a>
+		<a href="#image-10">
+			<img id="image-10" src="https://picsum.photos/530/309" alt="An image">
+		</a>
+	</figure>
+</section>
+
+	<script>
+		// document.querySelectorAll('img').forEach( (image) => {
+		// 	image.src = "minor-webdev.png"
+		// })
+		if (Array.prototype.forEach && 'querySelector' in document) {
+			var carouselButtons = document.querySelectorAll('[data-enable="js"]')
+			carouselButtons.forEach( function(button) {
+				button.style.display = "block";
+				button.addEventListener('click', setSliderButtons);
+			});
+
+			var allImages = document.querySelectorAll('.carousel-preview a');
+
+			function setSliderButtons(event) {
+				var hash = window.location.hash;
+				if(hash === '') {
+					hash = '#image-1';
+				}
+				var imageNum = Number(hash.split('-')[1]);
+				if(imageNum === NaN) {
+					imageNum = 1;
+				}
+				var lengthOfAllImages = allImages.length;
+				
+				event.target.id === 'prev' ? goToPrev() : goToNext();
+
+				function goToPrev() {
+					imageNum === 1 ? imageNum = allImages.length : imageNum--;
+					setHash(imageNum);
+				}
+
+				function goToNext() {
+					imageNum === allImages.length ? imageNum = 1 : imageNum++;
+					setHash(imageNum);
+				}
+				function setHash(newHash) {
+					window.location.hash = '#image-' + newHash;
+					
+					// history.replaceState(undefined, undefined, '#image-' + newHash);
+				}
+				
+			}
+		}
+	</script>
+</body>
+</html>
