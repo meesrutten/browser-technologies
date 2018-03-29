@@ -62,15 +62,18 @@ Hieronder geef ik per techniek aan welke (populaire) browser, en versie, dit ond
 ![Pattern](https://github.com/meesrutten/browser-technologies/blob/master/opdracht3/readme-images/pattern.jpg "Pattern sheet")
 
 ## Onderzoek browsers en devices
-Samsung browser:
-![samsung](https://github.com/meesrutten/browser-technologies/blob/master/opdracht3/readme-images/samsung.jpg "Samsung browser test")
 
-Windows tablet:
+### Samsung:
+![samsung](https://github.com/meesrutten/browser-technologies/blob/master/opdracht3/readme-images/samsung.jpg "Samsung test")
+Werkt op Chrome.
+
+### Windows tablet:
 ![Windows tablet](https://github.com/meesrutten/browser-technologies/blob/master/opdracht3/readme-images/windows-tablet.jpg "Windows tablet test")
+Werkt niet op Edge (Fallback)
 
-IE 11:
+### IE 11:
 ![IE11](https://github.com/meesrutten/browser-technologies/blob/master/opdracht3/readme-images/ie11.jpg "IE11 Test")
-
+Werkt niet op IE11 (Fallback)
 
 ## Accessibility
 De website moet met een toetsenbord te gebruiken zijn.
