@@ -39,6 +39,14 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 			mediaRecorder.start();
 		}
 
+		record.addEventListener("keydown", function (event) {
+			if (event.keyCode === 13 || event.keyCode === 32) {
+				console.log('recording');
+				mediaRecorder.start();
+			}
+		});
+
+
 		// Stops recording
 		record.onmouseup = function () {
 			console.log('recording stops');
@@ -54,6 +62,16 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 			record.style.color = "";
 			record.disabled = false;
 		}
+
+		record.addEventListener("keyup", function (event) {
+			if (event.keyCode === 13 || event.keyCode === 32) {
+				console.log('recording stops');
+				mediaRecorder.stop();
+				record.style.color = "";
+				record.disabled = false;
+			}
+		});
+
 
 		// When user stops recording
 		mediaRecorder.onstop = function (e) {

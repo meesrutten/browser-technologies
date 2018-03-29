@@ -21,7 +21,7 @@
 		<section class="main-controls">
 			<canvas class="visualizer" height="60px"></canvas>
 			<div id="buttons">
-				<button class="record">Record</button>
+				<button aria-label="Hold this button with spacebar or enter to record sounds" class="record">Record</button>
 				<button id="addAllToLoop">Add all to loop</button>
 				<a href="./index.html">
 					<button class="undo">Undo all</button>
@@ -30,12 +30,12 @@
 		</section>
 
 		<section class="sound-overview">
-			<section id="sound-clips-visualized">
+			<section aria-label="A visualisation of sound" id="sound-clips-visualized">
 				<div id="loopTimeIndicator"></div>
 			</section>
 			<section id="sound-clips">
 				<article class="clip no-js" style="margin-top: 0;">
-					<h2> Audio!</h2>
+					<h2>Audio!</h2>
 					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
 				</article>
 				<article class="clip no-js">

@@ -45,7 +45,7 @@ button {
 	padding: 1em 2em;
 	position: relative;
 	margin: 1em;
-	transition: background-color 150ms ease-out;
+	transition: transform 150ms ease-out;
 }
 button:before {
 	content: " ";
@@ -71,8 +71,9 @@ button:after {
 }
 
 button:hover {
-	background-color: black;
-	color: white;		
+	/* background-color: black;
+	color: white;		 */
+	transform: scale(1.1);
 }
 
 .addToLoop, #addAllToLoop {
@@ -85,18 +86,18 @@ button:hover {
 	background-color: rgba(231, 76, 60, .5);
 }
 .undo:hover {
-	background-color: rgba(231, 76, 60, .5);
-	color: white;
+	/* background-color: rgba(231, 76, 60, .5);
+	color: white; */
 }
 .record {
 	background-color: black;
 	color: red;
 	font-weight: 600;
-	transition: background-color 150ms ease-out;
+	transition: transform 150ms ease-out;
 }
 .record:hover {
-	background-color: rgba(0, 0, 0, .75);
-	color: red;
+	/* background-color: rgba(0, 0, 0, .75); */
+	/* color: red; */
 }
 .record:active {
 	color: red;
