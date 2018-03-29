@@ -1,0 +1,214 @@
+:root {
+	--fontTitle: 900 calc(3vw + 3vh + 3vmin)/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--fontBody: 400 1em/1.5 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font: var(--fontTitle);
+	text-align: center;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	margin: 0;
+}
+
+*, :before, :after {
+	box-sizing: border-box;
+}
+
+header h1 span:before {
+	content: attr(data-text);
+    position: absolute;
+	z-index: -1;
+}
+header h1 span:before {
+    transform: translate(-4px, -4px);
+    color: #3498db;
+}
+
+header p {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font: var(--fontTitle);
+	font-size: 2em;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 0;
+}
+
+button {
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	font-size: 1em;
+	padding: 1em 2em;
+	position: relative;
+	margin: 1em;
+	transition: background-color 150ms ease-out;
+}
+button:before {
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: -5px;
+	right: 4px;
+	bottom: 4px;
+	border: 1px solid black;
+	animation: glitch 200ms linear infinite running;
+}
+button:after {
+	content: " ";
+	position: absolute;
+	z-index: 2;
+	top: 4px;
+	left: 4px;
+	right: -6px;
+	bottom: -6px;
+	border: 1px solid black;
+	animation: glitch 200ms linear infinite running;
+}
+
+button:hover {
+	background-color: black;
+	color: white;		
+}
+
+.addToLoop, #addAllToLoop {
+	background-color: rgba(26, 188, 156, .5);
+}
+.delete {
+	background-color: #e74c3c;
+}
+.undo {
+	background-color: rgba(231, 76, 60, .5);
+}
+.undo:hover {
+	background-color: rgba(231, 76, 60, .5);
+	color: white;
+}
+.record {
+	background-color: black;
+	color: red;
+	font-weight: 600;
+	transition: background-color 150ms ease-out;
+}
+.record:hover {
+	background-color: rgba(0, 0, 0, .75);
+	color: red;
+}
+.record:active {
+	color: red;
+	background-color: white;
+}
+
+#buttons {
+	display: none;
+}
+
+#sound-clips-visualized {
+	display: none;
+	background-color: black;
+    width: 65%;
+    height: 30em;
+    margin-right: auto;
+    position: absolute;
+}
+.sound-block {
+	background-color: rgba(255, 255, 255, 1);
+	height: 100%;
+	display: inline-block;
+	border: 1px solid black;
+}
+.second-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+}
+.second-container-title {
+	position: absolute;
+	text-align: center;
+	left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 3em;
+	color: white;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+	margin: .65em auto;
+}
+.visual-sound {
+	background-color: transparent;
+	z-index: 3;
+	overflow: hidden;
+	display: inline-block;
+	display: flex;
+}
+.second-block {
+	background-color: black;
+	border: 1px solid rgba(255, 255, 255, 1);
+	display: inline-block;
+	width: 10%;
+	height: 100%;
+}
+#loopTimeIndicator {
+	z-index: 4;
+	width: 4px;
+	background-color: red;
+	height: 100%;
+	position: absolute;
+}
+#sound-clips {
+	max-width: 34%;
+	min-width: 300px;
+	max-height: 30em;
+	margin-left: auto;
+	overflow-y: scroll;
+}
+#sound-clips h2 {
+	text-align: left;
+	font-size: 2em;
+}
+#sound-clips label, #sound-clips label input {
+	font-size: 1em;
+	display: block;
+}
+#sound-clips label {
+	margin: 1em auto;
+}
+
+#sound-clips label input {
+	padding: .5em 1em;
+	text-align: center;
+}
+
+@keyframes glitch {
+	0%, 100% {
+		transform: translate(0, 0);
+	}
+	50%{
+		transform: translate(-1px, -1px);
+	}
+}
+
+@media (max-width: 48em) {
+	.second-container-title {
+		font-size: 2em;
+		margin: 0;
+	}
+	#sound-clips-visualized {
+		width: 100%;
+	}
+	#sound-clips {
+		max-width: 100%;
+		max-height: auto;
+		position: relative;
+		top: 1em;
+		overflow-y: initial;
+	}
+	.clip {
+		top: 30em;
+		position: relative
+	}
+}

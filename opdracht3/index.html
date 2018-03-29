@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>BEATBOX SAMPLER</title>
+</head>
+<link rel="stylesheet" href="./styles/main.css">
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>
+				<span data-text="BEATBOX">BEATBOX</span>
+				<span> </span>
+				<span data-text="SAMPLER">SAMPLER</span>
+			</h1>
+			<p>Hold down the 'Record' button to begin recording</p>
+		</header>
+
+		<section class="main-controls">
+			<canvas class="visualizer" height="60px"></canvas>
+			<div id="buttons">
+				<button class="record">Record</button>
+				<button id="addAllToLoop">Add all to loop</button>
+				<a href="./index.html">
+					<button class="undo">Undo all</button>
+				</a>
+			</div>
+		</section>
+
+		<section class="sound-overview">
+			<section id="sound-clips-visualized">
+				<div id="loopTimeIndicator"></div>
+			</section>
+			<section id="sound-clips">
+				<article class="clip no-js" style="margin-top: 0;">
+					<h2> Audio!</h2>
+					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+				</article>
+				<article class="clip no-js">
+					<h2>Audio 2!</h2>
+					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+				</article>
+				<article class="clip no-js">
+					<h2>Audio 3!</h2>
+					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+				</article>
+			</section>
+		</section>
+
+
+		</section>
+	</div>
+	<script src="./scripts/main.js"></script>
+</body>
+</html>
