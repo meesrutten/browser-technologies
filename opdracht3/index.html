@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>BEATBOX SAMPLER</title>
+	<link rel="stylesheet" href="./styles/main.css">
 </head>
-<link rel="stylesheet" href="./styles/main.css">
 <body>
 	<div class="wrapper">
 		<header>
@@ -16,6 +16,7 @@
 				<span data-text="SAMPLER">SAMPLER</span>
 			</h1>
 			<p>Hold down the 'Record' button to begin recording</p>
+			<a href="#made-by-others" style="display: none;">Creations by others</a>
 		</header>
 
 		<section class="main-controls">
@@ -34,21 +35,24 @@
 				<div id="loopTimeIndicator"></div>
 			</section>
 			<section id="sound-clips">
-				<article class="clip no-js" style="margin-top: 0;">
-					<h2>Audio!</h2>
-					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
-				</article>
-				<article class="clip no-js">
-					<h2>Audio 2!</h2>
-					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
-				</article>
-				<article class="clip no-js">
-					<h2>Audio 3!</h2>
-					<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
-				</article>
 			</section>
 		</section>
 
+		<section id="made-by-others">
+			<a id="close" href="#">Close</a>
+			<article class="other-clip no-js" style="margin-top: 0;">
+				<h2>Audio!</h2>
+				<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+			</article>
+			<article class="other-clip no-js">
+				<h2>Audio 2!</h2>
+				<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+			</article>
+			<article class="other-clip no-js">
+				<h2>Audio 3!</h2>
+				<audio controls="" src="http://media.w3.org/2010/05/sound/sound_90.mp3"></audio>
+			</article>
+		</section>
 
 		</section>
 	</div>

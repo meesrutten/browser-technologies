@@ -6,10 +6,20 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 	var mainSection = document.querySelector('.main-controls');
 
 	// JS RESETS
-	document.querySelectorAll('.no-js').forEach( function(clip){
-		clip.remove();
-	})
+	// document.querySelectorAll('.no-js').forEach( function(clip){
+	// 	clip.remove();
+	// })
 	document.querySelector('#buttons').style.display = "block";
+	document.querySelector('[href="#made-by-others"]').style.display = "inline-block";
+	document.querySelector('[href="#made-by-others"]').addEventListener('click', function(){
+		document.querySelector('#made-by-others').style.display = "block";
+	})
+	document.querySelector('#close').addEventListener('click', function(){
+		document.querySelector('#made-by-others').style.display = "none";
+	})
+	document.querySelector('#made-by-others').style.display = "none";
+	document.querySelector('#made-by-others').style.position = "fixed";
+	document.querySelector('header p').style.display = "block";
 	document.querySelector('#sound-clips-visualized').style.display = "block";
 
 	// visualiser setup - create web audio api context and canvas
@@ -263,7 +273,6 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 			// Create all the sound elements
 			var amountOfSoundBlocks = Math.floor((10000 - delay) / (duration + repeat));
 			console.log(delay, duration, repeat);
-			console.log( `Math.floor((10000 - ${delay}) / (${duration} + ${repeat}))` );
 			console.log(amountOfSoundBlocks);
 			var randomColor = colors[Math.floor(Math.random() * colors.length)];
 			colors.pop(randomColor);
@@ -308,5 +317,10 @@ function fallback(){
 	buttons.style.display = "none";
 	soundClipsVisual.style.display = "none";
 	soundClips.style.marginLeft = "1em";
-	soundClips.children.style.top = "1em";
+	var closeButton = document.getElementById('close');
+	closeButton.style.display = "none";
+	if (typeof soundClips.children[0] !== 'undefined') {
+		console.log(soundClips.children[0]);
+		soundClips.children.style.top = "1em";
+	}
 }

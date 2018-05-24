@@ -81,26 +81,49 @@ De website moet met een toetsenbord te gebruiken zijn.
 De record button gebruikt `onmousedown` om de button te activeren.
 Daarom heb ik een `keyCode`listener toegevoegd zodat de knop alsnog te gebruiken is. 
 
+ ## Afbeeldingen
+ Applicatie gebruikt geen afbeeldingen.
+ Alles wordt gegenereerd met CSS en JavaScript.
 
-# FEEDBACK
-IE11 Bugs
-Clips by others are not visible on enhanced version.
-
-TO DO!
-- **FOTOS**
-- 8 features, 
-- device lab
-- screenreader
-\
-- Onderzoek uitgebreid beschrijven
-- Plaatjes
-- Resources en resultaten in je beschrijving
-- Device lab fotos
-
-- **Menu**
-- onderzoek en testing toevoegen
-- readme enhancen
-- **carousel**
-- readme toevoegen
-- test toevoegen
+ ## Custom fonts
  
+ Ik gebruik de fonts die per platform de standaard zijn.
+ [Resource](https://css-tricks.com/snippets/css/system-font-stack/)
+ 
+ ## Javascript
+
+In de JavaScript zit de meeste functionaliteit. 
+Voor dit project gebruik ik [`navigator.mediaDevices.getUserMedia`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia) voor microfoon functionaliteiten en [`MediaRecorder`](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) voor het recorden van media. Dit zijn wat nieuwere technieken waar alleen moderne browsers support voor leveren.
+
+Als fallback laat ik `<audio>` elementen zien van tracks die andere gebruikers gemaakt hebben.
+
+ ## Kleur
+ Alle kleuren hebben een hoog contrast
+ ![alt text](./readme-images/kleur.png "Logo Title Text 1")
+ ![alt text](./readme-images/kleur2.png "Logo Title Text 1")
+ ![alt text](./readme-images/kleur3.png "Logo Title Text 1")
+ ![alt text](./readme-images/kleur4.png "Logo Title Text 1")
+ ![alt text](./readme-images/kleur5.png "Logo Title Text 1")
+ 
+ ## Breedband internet
+
+Eenmaal geladen gebruikt de website geen internet verbinding meer tenzij je audio bestanden van anderen wilt beluisteren of downloaden. Dit wordt via de browser allemaal afgehandeld. 
+De website bevat bijna niets, enkel een geringe hoeveelheid JavaScript, de laadtijd is daarom ook niet hoog op bijv. Slow 3g(±4 sec).
+ ![alt text](./readme-images/speed.png "Logo Title Text 1")
+
+ ## Cookies
+ 
+ De site heeft geen cookies nodig om normaal te functioneren, dus dit is niet van toepassing.
+ 
+ ## Testen met een screenreader
+  ![alt text](./readme-images/voiceover-test.png "Logo Title Text 1")
+  
+Met VoiceOver op de Mac heb ik een screenreader kunnen simuleren, de website is volledig door te tabben en de screenreader kon ook alles wat belangrijk was voorlezen.
+
+## Local Storage
+
+N.v.t.
+ 
+## Muis/Trackpad
+
+Het interface is volledig bruikbaar met muis, trackpad of toetsenbord.
