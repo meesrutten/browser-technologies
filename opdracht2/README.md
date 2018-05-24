@@ -19,38 +19,8 @@ Beoordelingscriteria
   -	Een beschrijving hoe de fallback werkt.
 
 ## Menu
-Ik heb hier een menu gemaakt met `a[href="#menu"]` en `:target`.
-Het menu wordt geanimeerd door CSS.
-
-Dit menu werkt zonder JavaScript en zonder CSS.
-
-Zou moeten werken vanaf IE9
-
-`Array.prototype.forEach`
-Wordt gebruikt als loop functie
-
-`querySelector`
-Wordt gebruikt voor element selection
-
-`requestAnimationFrame`
-Wordt gebruikt voor high performing animatie
-
-`matchMedia`
-Wordt gebruikt voor het menu op kleine schermen
-
-[Menu](https://meesrutten.me/minor/browser-tech/opdracht2/index.html/)
+[Menu repository](https://github.com/meesrutten/accessible-menu)
 
 ## Carousel
-Ik heb de carousel gemaakt met `a[href="#image-NUMBER"]` en `:target`.
-
-In CSS wordt een `scroll-behaviour: smooth` toegevoegd.
-
-In JavaScript worden `button` elementen toegevoegd om te navigeren in de carousel.
-
-Werkt zonder JavaScript.
-Zonder CSS ziet het er vreemd uit maar het werkt wel ongeveer.
-
-Zou moeten werken vanaf IE9
-
-[Carousel](https://meesrutten.me/minor/browser-tech/opdracht2/carousel.html/)
+[Carousel repository](https://github.com/meesrutten/accessible-carousel/)
 
