@@ -65,7 +65,7 @@ header [href="#made-by-others"]:hover {
 }
 
 #made-by-others #close {
-	display: block;
+	display: none;
 	font-weight: 600;
 	color: blue;
 }

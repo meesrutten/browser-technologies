@@ -4,21 +4,25 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 	var soundClips = document.querySelector('#sound-clips');
 	var canvas = document.querySelector('.visualizer');
 	var mainSection = document.querySelector('.main-controls');
-
+	var linkMadeByOther = document.querySelector('[href="#made-by-others"]');
+	var madeByOther = document.querySelector('#made-by-others');
 	// JS RESETS
 	// document.querySelectorAll('.no-js').forEach( function(clip){
 	// 	clip.remove();
 	// })
 	document.querySelector('#buttons').style.display = "block";
-	document.querySelector('[href="#made-by-others"]').style.display = "inline-block";
-	document.querySelector('[href="#made-by-others"]').addEventListener('click', function(){
-		document.querySelector('#made-by-others').style.display = "block";
+	linkMadeByOther.style.display = "inline-block";
+	linkMadeByOther.addEventListener('click', function(){
+		madeByOther.style.display = "block";
 	})
-	document.querySelector('#close').addEventListener('click', function(){
-		document.querySelector('#made-by-others').style.display = "none";
+	var closeButton = document.getElementById('close');
+	closeButton.style.display = "block";
+
+	closeButton.addEventListener('click', function(){
+		madeByOther.style.display = "none";
 	})
-	document.querySelector('#made-by-others').style.display = "none";
-	document.querySelector('#made-by-others').style.position = "fixed";
+	madeByOther.style.display = "none";
+	madeByOther.style.position = "fixed";
 	document.querySelector('header p').style.display = "block";
 	document.querySelector('#sound-clips-visualized').style.display = "block";
 
@@ -317,8 +321,6 @@ function fallback(){
 	buttons.style.display = "none";
 	soundClipsVisual.style.display = "none";
 	soundClips.style.marginLeft = "1em";
-	var closeButton = document.getElementById('close');
-	closeButton.style.display = "none";
 	if (typeof soundClips.children[0] !== 'undefined') {
 		console.log(soundClips.children[0]);
 		soundClips.children.style.top = "1em";
