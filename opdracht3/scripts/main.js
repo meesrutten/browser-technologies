@@ -276,8 +276,7 @@ if ('matchMedia' in window && Array.prototype.forEach && 'querySelector' in docu
 
 			// Create all the sound elements
 			var amountOfSoundBlocks = Math.floor((10000 - delay) / (duration + repeat));
-			console.log(delay, duration, repeat);
-			console.log(amountOfSoundBlocks);
+
 			var randomColor = colors[Math.floor(Math.random() * colors.length)];
 			colors.pop(randomColor);
 
@@ -322,7 +321,6 @@ function fallback(){
 	soundClipsVisual.style.display = "none";
 	soundClips.style.marginLeft = "1em";
 	if (typeof soundClips.children[0] !== 'undefined') {
-		console.log(soundClips.children[0]);
 		soundClips.children.style.top = "1em";
 	}
 }
